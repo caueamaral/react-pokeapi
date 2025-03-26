@@ -1,14 +1,12 @@
-# PokéAPI - React JS
+<img src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png" alt="PokéAPI">
 
 List of Pokémon cards using [PokéAPI](https://pokeapi.co) and [React](https://react.dev).
 
-<img src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png" alt="PokéAPI">
-
 ## React
 
-- useState()
-- useEffetc()
 - axios
+- useEffect()
+- useState()
 
 ### How to use it
 
