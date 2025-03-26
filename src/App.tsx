@@ -1,24 +1,25 @@
-import { useState } from 'react'
 import pokeapiLogo from './assets/logo-pokeapi.svg'
 import './App.css'
 
 function App() {
   return (
     <>
-      <div>
-        <a href="https://react.dev" target="_blank">
-          <img src={pokeapiLogo} alt="PokéAPI logo" className="logo" />
-        </a>
+      <div className="container">
+        <article>
+          <header>
+            <img src={pokeapiLogo} alt="PokéAPI logo" className="logo" />
+            <h1>
+                List cards with React JS
+              </h1>
+          </header>
+          <main>
+            Main
+          </main>
+        </article>
       </div>
-      <h1>React JS project</h1>
-      <div className="card">
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <footer>
+        PokéAPI 2025 - All rights reserved.
+      </footer>
     </>
   )
 }
