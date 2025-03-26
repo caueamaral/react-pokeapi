@@ -1,10 +1,10 @@
-# PokéAPI - React JS project
+# PokéAPI - React JS
 
-List of Pokémon cards using [PokéAPI](https://pokeapi.co) and [React JS](https://react.dev).
+List of Pokémon cards using [PokéAPI](https://pokeapi.co) and [React](https://react.dev).
 
 <img src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png" alt="PokéAPI">
 
-## ReactJS
+## React
 
 - useState()
 - useEffetc()
@@ -30,7 +30,7 @@ npm install
 npm run dev
 ```
 
-4 - Open the localhost in the browser
+4 - Open localhost in the browser
 
 ```sh
 http://localhost:5173
