@@ -14,9 +14,10 @@ body {
 /* Variables */
 :root {
   --white: #fff;
-
   --headerHeight: 240px;
   --footerHeight: 80px;
+  --mainSpacing: 40px;
+  --cardSpacing: 40px;
 }
 
 
@@ -58,7 +59,8 @@ header h1 {
 
 /* Main */
 main {
-  min-height: calc(100vh - var(--headerHeight) - var(--footerHeight));
+  min-height: calc(100vh - var(--headerHeight) - var(--footerHeight) - var(--mainSpacing));
+  padding-bottom: var(--mainSpacing);
 }
 
 
@@ -76,7 +78,7 @@ footer {
 /* Cards */
 .cards {
   display: grid;
-  gap: 40px;
+  gap: var(--cardSpacing);
   grid-template-columns: repeat(5, 1fr);
 }
 
