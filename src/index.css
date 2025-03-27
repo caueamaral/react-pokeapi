@@ -10,9 +10,10 @@ body {
   min-height: 100vh;
 }
 
+
 /* Variables */
 :root {
-  --lightColor: #fff;
+  --white: #fff;
 
   --headerHeight: 240px;
   --footerHeight: 80px;
@@ -39,7 +40,7 @@ article {
 /* Header */
 header {
   align-items: center;
-  color: var(--lightColor);
+  color: var(--white);
   display: flex;
   flex-direction: column;
   height: var(--headerHeight);
@@ -57,7 +58,6 @@ header h1 {
 
 /* Main */
 main {
-  color: var(--lightColor);
   min-height: calc(100vh - var(--headerHeight) - var(--footerHeight));
 }
 
@@ -65,9 +65,24 @@ main {
 /* Footer */
 footer {
   align-items: center;
-  background: #fff;
+  background: var(--white);
   display: flex;
   height: var(--footerHeight);
   justify-content: center;
   text-align: center;
+}
+
+
+/* Cards */
+.cards {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.card {
+  background: var(--white);
+  border-radius: 10px;
+  min-height: 200px;
+  padding: 10px;
 }

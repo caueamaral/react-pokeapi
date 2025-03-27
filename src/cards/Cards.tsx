@@ -1,5 +1,11 @@
+import { Card } from './Card'
+
 export function Cards() {
     return (
-        <div>Cards</div>
+        <>
+            <article className="cards">
+                <Card />
+            </article>
+        </>
     )
 }
