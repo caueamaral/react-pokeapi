@@ -10,6 +10,14 @@ body {
   min-height: 100vh;
 }
 
+/* Variables */
+:root {
+  --lightColor: #fff;
+
+  --headerHeight: 240px;
+  --footerHeight: 80px;
+}
+
 
 /* Structure */
 body {
@@ -19,23 +27,23 @@ body {
 
 .container {
   margin-inline: auto;
-  margin-block: 40px;
   max-width: 1000px;
 }
 
 article {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
 }
 
 
 /* Header */
 header {
   align-items: center;
-  color: #fff;
+  color: var(--lightColor);
   display: flex;
   flex-direction: column;
+  height: var(--headerHeight);
+  justify-content: center;
 }
 
 header .logo {
@@ -49,15 +57,17 @@ header h1 {
 
 /* Main */
 main {
-  background: #fff;
-  margin-top: 40px;
-  min-height: 100vh;
+  color: var(--lightColor);
+  min-height: calc(100vh - var(--headerHeight) - var(--footerHeight));
 }
 
 
 /* Footer */
 footer {
+  align-items: center;
   background: #fff;
-  padding-block: 30px;
+  display: flex;
+  height: var(--footerHeight);
+  justify-content: center;
   text-align: center;
 }

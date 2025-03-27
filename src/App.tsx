@@ -1,25 +1,20 @@
-import pokeapiLogo from './assets/logo-pokeapi.svg'
 import './App.css'
+import { Header } from './header/Header' 
+import { Footer } from './footer/Footer'
+import { Cards } from './cards/Cards'
 
 function App() {
   return (
     <>
       <div className="container">
         <article>
-          <header>
-            <img src={pokeapiLogo} alt="PokéAPI logo" className="logo" />
-            <h1>
-                List cards with React JS
-              </h1>
-          </header>
+          <Header />
           <main>
-            Main
+            <Cards />
           </main>
         </article>
       </div>
-      <footer>
-        PokéAPI 2025 - All rights reserved.
-      </footer>
+      <Footer />
     </>
   )
 }
