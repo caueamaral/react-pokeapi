@@ -8,10 +8,7 @@ export function Cards() {
 
     useEffect(() => {
         getPokemons()
-            .then(response => {
-                console.log('response.data.results.name', response.data.results)
-                setPokemons(response.data.results)
-        })
+            .then(response => setPokemons(response.data.results))
     }, [])
 
     return (
