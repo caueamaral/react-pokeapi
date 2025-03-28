@@ -11,6 +11,7 @@ export function Card({ name, index }: { name: string, index: number }) {
     }, [])
 
     const formattedIndex = index.toString().padStart(3, '0')
+    const formattedName = name.trim().charAt(0).toUpperCase() + name.slice(1)
 
     return (
         <section className="card">
@@ -25,7 +26,7 @@ export function Card({ name, index }: { name: string, index: number }) {
                                 #{formattedIndex}
                             </div>
                             <h2>
-                                {pokemon.name}
+                                {formattedName}
                             </h2>
                             <p>
                                 <span className="gray">Type:</span>
