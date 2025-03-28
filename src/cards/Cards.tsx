@@ -16,7 +16,7 @@ export function Cards() {
             <article className="cards">
                 {
                     pokemons.map((pokemon, index) => (
-                        <Card key={index} name={pokemon.name} />
+                        <Card key={index} name={pokemon.name} index={index + 1} />
                     ))
                 }
                 

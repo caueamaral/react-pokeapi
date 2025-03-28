@@ -2,13 +2,15 @@ import { useEffect, useState } from 'react'
 import { getPokemon } from '../services/getPokemon'
 import { PokemonInterface } from "../interfaces/PokemonInterface"
 
-export function Card({ name }: { name: string }) {
+export function Card({ name, index }: { name: string, index: number }) {
     const [pokemon, setPokemon] = useState<PokemonInterface | undefined>(undefined)
     
     useEffect(() => {
         getPokemon(name)
             .then(response => setPokemon(response.data))
     }, [])
+
+    const formattedIndex = index.toString().padStart(3, '0')
 
     return (
         <section className="card">
@@ -20,7 +22,7 @@ export function Card({ name }: { name: string }) {
                                 <img src={pokemon.sprites.other.dream_world.front_default} alt={pokemon.name} />
                             </figure>
                             <div className="number gray">
-                                #001
+                                #{formattedIndex}
                             </div>
                             <h2>
                                 {pokemon.name}
