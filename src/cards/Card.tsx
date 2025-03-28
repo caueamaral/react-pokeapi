@@ -14,7 +14,11 @@ export function Card({ name }: { name: string }) {
         <section className="card">
             {pokemon ? <h2>{pokemon.name}</h2> : <h2>Pokémon not found</h2>}
             
-            {pokemon ? <div>{pokemon.types[0].type.name}</div> : <div>Type not found</div>}
+            {
+                pokemon
+                    ? <div>Type: {pokemon.types[0].type.name}</div>
+                    : <div>Type: not found</div>
+            }
         </section>
     )
 }

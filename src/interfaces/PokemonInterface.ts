@@ -1,4 +1,6 @@
 export interface PokemonInterface {
     name: string,
-    types: string[]
+    types: {
+        type: { name: string }
+    }[]
 }
