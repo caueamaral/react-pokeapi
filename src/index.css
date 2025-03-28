@@ -1,5 +1,6 @@
 /* Reset */
 * {
+  font-size: 15px;
   font-weight: normal;
   margin: 0;
   padding: 0;
@@ -23,7 +24,7 @@ body {
 
 /* Utilities */
 .gray {
-  color: #999;
+  color: #aaa;
 }
 
 /* Structure */
@@ -58,6 +59,7 @@ header .logo {
 }
 
 header h1 {
+  font-size: 24px;
   margin-top: 30px;
 }
 
@@ -110,10 +112,15 @@ footer {
   max-width: 150px;
 }
 
-.card h2 {
-  margin-top: 10px;
+.card .number {
+  margin-top: 30px;
 }
 
+.card h2 {
+  font-size: 24px;
+}
+
+.card h2,
 .card p {
   margin-top: 5px;
 }

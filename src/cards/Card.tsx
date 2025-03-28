@@ -25,6 +25,9 @@ export function Card({ name }: { name: string }) {
                             <figure>
                                 <img src={pokemon.sprites.other.dream_world.front_default} alt={pokemon.name} />
                             </figure>
+                            <div className="number gray">
+                                #001
+                            </div>
                             <h2>
                                 {pokemon.name}
                             </h2>
