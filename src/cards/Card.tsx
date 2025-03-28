@@ -22,14 +22,26 @@ export function Card({ name }: { name: string }) {
                 pokemon
                     ?
                         <>
-                            <img src={pokemon.sprites.other.dream_world.front_default} alt={pokemon.name} className="" />
-                            <h2>{pokemon.name}</h2>
-                            <div>Type: {pokemon.types[0].type.name}</div>                        
+                            <figure>
+                                <img src={pokemon.sprites.other.dream_world.front_default} alt={pokemon.name} />
+                            </figure>
+                            <h2>
+                                {pokemon.name}
+                            </h2>
+                            <p>
+                                <span className="gray">Type:</span>
+                                &nbsp;
+                                <span>{pokemon.types[0].type.name}</span>
+                            </p>
                         </>
                     :
                         <>
-                            <h2>Pokémon not found</h2>
-                            <div>Type: not found</div>
+                            <h2>
+                                Pokémon not found
+                            </h2>
+                            <p>
+                                Type: not found
+                            </p>
                         </>
             }
         </section>

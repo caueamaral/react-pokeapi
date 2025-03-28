@@ -21,6 +21,11 @@ body {
 }
 
 
+/* Utilities */
+.gray {
+  color: #999;
+}
+
 /* Structure */
 body {
   background: linear-gradient(to right, #293581, #da353b);
@@ -89,10 +94,26 @@ footer {
   display: flex;
   flex-direction: column;
   min-height: 200px;
-  padding: 10px;
+  padding: 20px;
+}
+
+.card figure {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 150px;
+  width: 150px;
 }
 
 .card img {
   max-height: 150px;
   max-width: 150px;
+}
+
+.card h2 {
+  margin-top: 10px;
+}
+
+.card p {
+  margin-top: 5px;
 }
