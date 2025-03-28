@@ -16,8 +16,8 @@ body {
   --white: #fff;
   --headerHeight: 240px;
   --footerHeight: 80px;
-  --mainSpacing: 40px;
-  --cardSpacing: 40px;
+  --mainSpacing: 30px;
+  --cardSpacing: 30px;
 }
 
 
@@ -79,12 +79,20 @@ footer {
 .cards {
   display: grid;
   gap: var(--cardSpacing);
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .card {
+  align-items: center;
   background: var(--white);
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
   min-height: 200px;
   padding: 10px;
+}
+
+.card img {
+  max-height: 150px;
+  max-width: 150px;
 }
