@@ -10,12 +10,6 @@ export function Card({ name }: { name: string }) {
             .then(response => setPokemon(response.data))
     }, [])
 
-    useEffect(() => {
-        if (! pokemon) return
-
-        console.log(pokemon.sprites.other.dream_world.front_default)
-    }, [pokemon])
-
     return (
         <section className="card">
             {

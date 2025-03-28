@@ -67,6 +67,7 @@ header h1 {
 /* Main */
 main {
   min-height: calc(100vh - var(--headerHeight) - var(--footerHeight) - var(--mainSpacing));
+  padding-inline: var(--mainSpacing);
   padding-bottom: var(--mainSpacing);
 }
 
@@ -86,7 +87,24 @@ footer {
 .cards {
   display: grid;
   gap: var(--cardSpacing);
-  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (min-width:499px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width:700px) and (max-width:899px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width:900px) {
+  .cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .card {
