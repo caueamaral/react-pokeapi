@@ -24,6 +24,7 @@ body {
   --typeWater: #9ae8db;
   --typeBug: #8c82a9;
   --typeNormal: #ddd;
+  --radius: 10px;
 }
 
 
@@ -67,7 +68,7 @@ header .logo {
 main {
   min-height: calc(100vh - var(--headerHeight) - var(--footerHeight) - var(--mainSpacing));
   padding-inline: var(--mainSpacing);
-  padding-bottom: var(--mainSpacing);
+  padding-bottom: calc(var(--mainSpacing) + 30px);
 }
 
 main h1 {
@@ -116,7 +117,7 @@ footer {
 .card {
   align-items: center;
   background: var(--white);
-  border-radius: 10px;
+  border-radius: var(--radius);
   display: flex;
   flex-direction: column;
   min-height: 200px;
@@ -173,4 +174,22 @@ footer {
 
 .type-normal {
   border-color: var(--typeNormal);
+}
+
+
+/* Filter */
+.filter {
+  margin-bottom: 30px;
+}
+
+.filter-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter-form {
+  background: var(--white);
+  border-radius: var(--radius);
+  width: 212px;
 }
