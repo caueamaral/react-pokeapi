@@ -15,7 +15,7 @@ body {
 /* Variables */
 :root {
   --white: #fff;
-  --headerHeight: 240px;
+  --headerHeight: 210px;
   --footerHeight: 80px;
   --mainSpacing: 30px;
   --cardSpacing: 30px;
@@ -52,7 +52,6 @@ article {
 /* Header */
 header {
   align-items: center;
-  color: var(--white);
   display: flex;
   flex-direction: column;
   height: var(--headerHeight);
@@ -63,11 +62,6 @@ header .logo {
   max-width: 250px;
 }
 
-header h1 {
-  font-size: 24px;
-  margin-top: 30px;
-}
-
 
 /* Main */
 main {
@@ -75,6 +69,13 @@ main {
   padding-inline: var(--mainSpacing);
   padding-bottom: var(--mainSpacing);
 }
+
+main h1 {
+  color: var(--white);
+  font-size: 24px;
+  margin-block: 30px;
+}
+
 
 
 /* Footer */
