@@ -19,6 +19,11 @@ body {
   --footerHeight: 80px;
   --mainSpacing: 30px;
   --cardSpacing: 30px;
+  --typeGrass: #a6d7a8;
+  --typeFire: #d7a36a;
+  --typeWater: #9ae8db;
+  --typeBug: #8c82a9;
+  --typeNormal: #ddd;
 }
 
 
@@ -141,4 +146,30 @@ footer {
 .card h2,
 .card p {
   margin-top: 5px;
+}
+
+
+/* Types */
+[class*='type-'] {
+  border:7px solid;
+}
+
+.type-grass {
+  border-color: var(--typeGrass);
+}
+
+.type-fire {
+  border-color: var(--typeFire);
+}
+
+.type-water {
+  border-color: var(--typeWater);
+}
+
+.type-bug {
+  border-color: var(--typeBug);
+}
+
+.type-normal {
+  border-color: var(--typeNormal);
 }

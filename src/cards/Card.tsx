@@ -14,11 +14,11 @@ export function Card({ name, index }: { name: string, index: number }) {
     const formattedName = name.trim().charAt(0).toUpperCase() + name.slice(1)
 
     return (
-        <section className="card">
+        <>
             {
                 pokemon
                     ?
-                        <>
+                        <section className={`card type-${pokemon.types[0].type.name}`}>
                             <figure>
                                 <img src={pokemon.sprites.other.dream_world.front_default} alt={pokemon.name} />
                             </figure>
@@ -33,17 +33,17 @@ export function Card({ name, index }: { name: string, index: number }) {
                                 &nbsp;
                                 <span>{pokemon.types[0].type.name}</span>
                             </p>
-                        </>
+                        </section>
                     :
-                        <>
+                        <section className="card type-normal">
                             <h2>
                                 Pokémon not found
                             </h2>
                             <p>
                                 Type: not found
                             </p>
-                        </>
+                        </section>
             }
-        </section>
+        </>
     )
 }
