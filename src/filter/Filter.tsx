@@ -1,9 +1,20 @@
+import { useState } from 'react'
+
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
 export function Filter() {
+    const types = [
+        'All',
+        'Fire',
+        'Water',
+        'Grass',
+        'Bug',
+        'Normal'
+    ]
+
     return (
         <section className="filter">
             <div className="filter-container">
@@ -12,15 +23,18 @@ export function Filter() {
                 </h1>
                 <div>
                     <FormControl className="filter-form">
-                        <InputLabel id="demo-simple-select-label">All</InputLabel>
+                        <InputLabel id="demo-simple-select-label">{types[0]}</InputLabel>
                         <Select
                             labelId="demo-simple-select-label"
                             id="demo-simple-select"
                             value=""
                             label="All"
                         >
-                            <MenuItem value="all">All</MenuItem>
-                            <MenuItem value="normal">Normal</MenuItem>
+                            {
+                                types.map((type, index) => (
+                                    <MenuItem key={index}>{type}</MenuItem>
+                                ))
+                            }
                         </Select>
                     </FormControl>
                 </div>
