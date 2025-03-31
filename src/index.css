@@ -205,6 +205,10 @@ footer {
   border-color: var(--white);
 }
 
+.filter-form .css-sc8y68-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: var(--white);
+}
+
 .filter-form .MuiSelect-select {
   color: var(--white);
 }
