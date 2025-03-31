@@ -192,3 +192,23 @@ footer {
   border-radius: var(--radius);
   width: 212px;
 }
+
+.filter-form .MuiSvgIcon-root {
+  fill: var(--white);
+}
+
+.filter-form .MuiOutlinedInput-notchedOutline {
+  border-color: var(--white);
+}
+
+.filter-form .css-sc8y68-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: var(--white);
+}
+
+.filter-form .MuiSelect-select {
+  color: var(--white);
+}
+
+.filter-form .MuiFormLabel-root {
+  color: var(--white);
+}
