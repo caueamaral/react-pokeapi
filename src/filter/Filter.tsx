@@ -6,14 +6,20 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
 export function Filter() {
+    const [selectedType, setSelectedType] = useState()
+
     const types = [
-        'All',
-        'Fire',
-        'Water',
-        'Grass',
-        'Bug',
-        'Normal'
+        'all',
+        'fire',
+        'water',
+        'grass',
+        'bug',
+        'normal'
     ]
+
+    const handleChange = event => {
+        setSelectedType(event.target.value)
+    }
 
     return (
         <section className="filter">
@@ -23,16 +29,23 @@ export function Filter() {
                 </h1>
                 <div>
                     <FormControl className="filter-form">
-                        <InputLabel id="demo-simple-select-label">{types[0]}</InputLabel>
+                        <InputLabel id="demo-simple-select-label">{selectedType}</InputLabel>
                         <Select
                             labelId="demo-simple-select-label"
                             id="demo-simple-select"
-                            value=""
-                            label="All"
+                            value={selectedType}
+                            label="Type"
+                            onChange={handleChange}
                         >
                             {
                                 types.map((type, index) => (
-                                    <MenuItem key={index}>{type}</MenuItem>
+                                    <MenuItem
+                                        key={index}
+                                        value={type}
+                                    >
+                                        
+                                        {type}
+                                    </MenuItem>
                                 ))
                             }
                         </Select>
