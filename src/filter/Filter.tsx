@@ -6,8 +6,6 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
 export function Filter() {
-    const [selectedType, setSelectedType] = useState()
-
     const types = [
         'all',
         'fire',
@@ -16,6 +14,8 @@ export function Filter() {
         'bug',
         'normal'
     ]
+
+    const [selectedType, setSelectedType] = useState(types[0])
 
     const handleChange = event => {
         setSelectedType(event.target.value)

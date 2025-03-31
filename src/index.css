@@ -189,7 +189,6 @@ footer {
 }
 
 .filter-form {
-  background: var(--white);
   border-radius: var(--radius);
   width: 212px;
 }
