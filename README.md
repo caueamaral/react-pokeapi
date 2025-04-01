@@ -4,6 +4,7 @@ List of Pokémon cards using [PokéAPI](https://pokeapi.co) and [React](https://
 
 ## React
 
+- Material UI
 - axios
 - useEffect()
 - useState()
