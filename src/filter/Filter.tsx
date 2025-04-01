@@ -5,6 +5,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
+import { SelectChangeEvent } from '@mui/material/Select';
 import { firstLetterUppercase } from '../functions/firstLetterUppercase'
 
 export function Filter() {
@@ -19,7 +20,7 @@ export function Filter() {
 
     const [selectedType, setSelectedType] = useState(types[0])
 
-    const handleChange = event => {
+    const handleChange = (event: SelectChangeEvent) => {
         setSelectedType(event.target.value)
     }
 
