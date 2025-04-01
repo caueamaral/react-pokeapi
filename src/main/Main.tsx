@@ -10,7 +10,7 @@ export function Main() {
         <>
             <main>
                 <Filter selectedType={selectedType} setSelectedType={setSelectedType} />
-                <Cards selectedType={selectedType} />
+                <Cards />
             </main>
         </>
     )
