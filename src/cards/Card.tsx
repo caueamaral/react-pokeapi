@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { getPokemon } from '../services/getPokemon'
+import { firstLetterUppercase } from '../functions/firstLetterUppercase'
 import { PokemonInterface } from "../interfaces/PokemonInterface"
 
 export function Card({ name, index }: { name: string, index: number }) {
@@ -11,7 +12,6 @@ export function Card({ name, index }: { name: string, index: number }) {
     }, [])
 
     const formattedIndex = index.toString().padStart(3, '0')
-    const formattedName = name.trim().charAt(0).toUpperCase() + name.slice(1)
 
     return (
         <>
@@ -26,7 +26,7 @@ export function Card({ name, index }: { name: string, index: number }) {
                                 #{formattedIndex}
                             </div>
                             <h2>
-                                {formattedName}
+                                {firstLetterUppercase(name)}
                             </h2>
                             <p>
                                 <span className="gray">Type:</span>
