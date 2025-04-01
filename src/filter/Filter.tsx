@@ -29,7 +29,7 @@ export function Filter() {
                 </h1>
                 <div>
                     <FormControl className="filter-form">
-                        <InputLabel id="demo-simple-select-label">{selectedType}</InputLabel>
+                        <InputLabel id="demo-simple-select-label">Type</InputLabel>
                         <Select
                             labelId="demo-simple-select-label"
                             id="demo-simple-select"

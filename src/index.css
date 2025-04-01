@@ -209,6 +209,10 @@ footer {
   border-color: var(--white);
 }
 
+.filter-form .css-113d811-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+  color: var(--white);
+}
+
 .filter-form .MuiSelect-select {
   color: var(--white);
 }
