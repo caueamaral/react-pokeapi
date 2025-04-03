@@ -2,15 +2,15 @@ import { useEffect, useState } from 'react'
 import { firstLetterUppercase } from '../functions/firstLetterUppercase'
 import { getPokemonDetails } from '../services/getPokemonDetails'
 import { PokemonInterface } from '../interfaces/PokemonInterface'
-
+import { PokemonDetailsInterface } from '../interfaces/PokemonDetailsInterface'
 interface CardProps {
     pokemon: PokemonInterface,
     index: number
 }
 
 export function Card({ pokemon, index }: CardProps) {
+    const [pokemonDetails, setPokemonDetails] = useState<PokemonDetailsInterface>()
     const formattedIndex = index.toString().padStart(3, '0')
-    const [pokemonDetails, setPokemonDetails] = useState()
 
     useEffect(() => {
         getPokemonDetails(pokemon.name)
