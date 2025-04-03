@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-export function getPokemon(name: string) {
+export function getPokemonDetails(name: string) {
     const endpoint = `${import.meta.env.VITE_POKEAPI}/${name}`
     const response = axios.get(endpoint)
 

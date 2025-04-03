@@ -1,23 +1,23 @@
-import { useEffect, useState } from 'react'
 import { Card } from './Card'
-import { getPokemons } from '../services/getPokemons'
 import { PokemonInterface } from '../interfaces/PokemonInterface'
 
-export function Cards() {
-    const [pokemons, setPokemons] = useState<PokemonInterface[]>([])
+interface CardsProps {
+    pokemons: PokemonInterface[]
+}
 
-    useEffect(() => {
-        getPokemons()
-            .then(response => setPokemons(response.data.results))
-    }, [])
-
+export function Cards({ pokemons }: CardsProps ) {
     return (
         <>
             <article className="cards">
                 {
-                    pokemons.map((pokemon, index) => (
-                        <Card key={index} name={pokemon.name} index={index + 1} />
-                    ))
+                    pokemons
+                        .map((pokemon, index) => {
+                            if (! pokemon) return
+
+                            return (
+                                <Card key={index} pokemon={pokemon} index={index + 1} />
+                            )
+                        })
                 }
                 
             </article>

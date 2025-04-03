@@ -1,37 +1,41 @@
 import { useEffect, useState } from 'react'
-import { getPokemon } from '../services/getPokemon'
 import { firstLetterUppercase } from '../functions/firstLetterUppercase'
-import { PokemonInterface } from "../interfaces/PokemonInterface"
+import { getPokemonDetails } from '../services/getPokemonDetails'
+import { PokemonInterface } from '../interfaces/PokemonInterface'
 
-export function Card({ name, index }: { name: string, index: number }) {
-    const [pokemon, setPokemon] = useState<PokemonInterface | undefined>(undefined)
-    
-    useEffect(() => {
-        getPokemon(name)
-            .then(response => setPokemon(response.data))
-    }, [])
+interface CardProps {
+    pokemon: PokemonInterface,
+    index: number
+}
 
+export function Card({ pokemon, index }: CardProps) {
     const formattedIndex = index.toString().padStart(3, '0')
+    const [pokemonDetails, setPokemonDetails] = useState()
+
+    useEffect(() => {
+        getPokemonDetails(pokemon.name)
+            .then(response => setPokemonDetails(response.data))
+    }, [])
 
     return (
         <>
             {
-                pokemon
+                pokemonDetails
                     ?
-                        <section className={`card type-${pokemon.types[0].type.name}`}>
+                        <section className={`card type-${pokemonDetails.types[0].type.name}`}>
                             <figure>
-                                <img src={pokemon.sprites.other.dream_world.front_default} alt={pokemon.name} />
+                                <img src={pokemonDetails.sprites.other.dream_world.front_default} alt={pokemon.name} />
                             </figure>
                             <div className="number gray">
                                 #{formattedIndex}
                             </div>
                             <h2>
-                                {firstLetterUppercase(name)}
+                                {firstLetterUppercase(pokemon.name)}
                             </h2>
                             <p>
                                 <span className="gray">Type:</span>
                                 &nbsp;
-                                <span>{pokemon.types[0].type.name}</span>
+                                <span>{pokemonDetails.types[0].type.name}</span>
                             </p>
                         </section>
                     :
