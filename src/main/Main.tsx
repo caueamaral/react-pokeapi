@@ -20,8 +20,14 @@ export function Main() {
     return (
         <>
             <main>
-                <Filter selectedType={selectedType} setSelectedType={setSelectedType} />
-                <Cards pokemons={pokemons} />
+                <Filter
+                    selectedType={selectedType}
+                    setSelectedType={setSelectedType}
+                />
+                <Cards
+                    selectedType={selectedType}
+                    pokemons={pokemons}
+                />
             </main>
         </>
     )
