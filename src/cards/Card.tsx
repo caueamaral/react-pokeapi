@@ -19,19 +19,6 @@ export function Card({ selectedType, setSelectedType, pokemon, index }: CardProp
             .then(response => setPokemonDetails(response.data))
     }, [])
 
-    useEffect(() => {
-        if (! pokemonDetails) return
-
-        console.log('pokemonDetails', pokemonDetails.types[0].type.name)
-        console.log('selectedType', selectedType)
-        console.log('--------')
-    }, [pokemonDetails])
-
-    // useEffect(() => {
-    //     console.log('pokemonDetails', pokemonDetails)
-    //     console.log('selectedType', selectedType)
-    // }, [selectedType])
-
     return (
         <>
             {
