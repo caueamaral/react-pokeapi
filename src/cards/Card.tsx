@@ -5,7 +5,7 @@ import { PokemonInterface } from '../interfaces/PokemonInterface'
 import { PokemonDetailsInterface } from '../interfaces/PokemonDetailsInterface'
 interface CardProps {
     selectedType: string,
-    setSelectedType: React.Dispatch<React.SetStateAction<string>>,
+    setSelectedType: React.Dispatch<React.SetStateAction<string>>
     pokemon: PokemonInterface,
     index: number
 }
@@ -19,36 +19,40 @@ export function Card({ selectedType, setSelectedType, pokemon, index }: CardProp
             .then(response => setPokemonDetails(response.data))
     }, [])
 
+    useEffect(() => {
+        if (! pokemonDetails) return
+
+        console.log('pokemonDetails', pokemonDetails.types[0].type.name)
+        console.log('selectedType', selectedType)
+        console.log('--------')
+    }, [pokemonDetails])
+
+    // useEffect(() => {
+    //     console.log('pokemonDetails', pokemonDetails)
+    //     console.log('selectedType', selectedType)
+    // }, [selectedType])
+
     return (
         <>
             {
-                pokemonDetails
-                    ?
-                        <section className={`card type-${pokemonDetails.types[0].type.name}`}>
-                            <figure>
-                                <img src={pokemonDetails.sprites.other.dream_world.front_default} alt={pokemon.name} />
-                            </figure>
-                            <div className="number gray">
-                                #{formattedIndex}
-                            </div>
-                            <h2>
-                                {firstLetterUppercase(pokemon.name)}
-                            </h2>
-                            <p>
-                                <span className="gray">Type:</span>
-                                &nbsp;
-                                <span>{pokemonDetails.types[0].type.name}</span>
-                            </p>
-                        </section>
-                    :
-                        <section className="card type-normal">
-                            <h2>
-                                Pokémon not found
-                            </h2>
-                            <p>
-                                Type: not found
-                            </p>
-                        </section>
+                pokemonDetails && pokemonDetails.types[0].type.name == selectedType && (
+                    <section className={`card type-${pokemonDetails.types[0].type.name}`}>
+                        <figure>
+                            <img src={pokemonDetails.sprites.other.dream_world.front_default} alt={pokemon.name} />
+                        </figure>
+                        <div className="number gray">
+                            #{formattedIndex}
+                        </div>
+                        <h2>
+                            {firstLetterUppercase(pokemon.name)}
+                        </h2>
+                        <p>
+                            <span className="gray">Type:</span>
+                            &nbsp;
+                            <span>{pokemonDetails.types[0].type.name}</span>
+                        </p>
+                    </section>
+                )
             }
         </>
     )
