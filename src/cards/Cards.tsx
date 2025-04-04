@@ -3,11 +3,10 @@ import { PokemonInterface } from '../interfaces/PokemonInterface'
 
 interface CardsProps {
     selectedType: string,
-    setSelectedType: React.Dispatch<React.SetStateAction<string>>,
     pokemons: PokemonInterface[]
 }
 
-export function Cards({ selectedType, setSelectedType, pokemons }: CardsProps ) {
+export function Cards({ selectedType, pokemons }: CardsProps ) {
     return (
         <>
             <article className="cards">
@@ -20,7 +19,6 @@ export function Cards({ selectedType, setSelectedType, pokemons }: CardsProps ) 
                                 <Card
                                     key={index}
                                     selectedType={selectedType}
-                                    setSelectedType={setSelectedType}
                                     pokemon={pokemon}
                                     index={index + 1}
                                 />

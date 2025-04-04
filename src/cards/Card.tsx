@@ -5,12 +5,11 @@ import { PokemonInterface } from '../interfaces/PokemonInterface'
 import { PokemonDetailsInterface } from '../interfaces/PokemonDetailsInterface'
 interface CardProps {
     selectedType: string,
-    setSelectedType: React.Dispatch<React.SetStateAction<string>>
     pokemon: PokemonInterface,
     index: number
 }
 
-export function Card({ selectedType, setSelectedType, pokemon, index }: CardProps) {
+export function Card({ selectedType, pokemon, index }: CardProps) {
     const [pokemonDetails, setPokemonDetails] = useState<PokemonDetailsInterface>()
     const formattedIndex = index.toString().padStart(3, '0')
 
