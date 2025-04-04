@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { Card } from './Card'
 import { PokemonInterface } from '../interfaces/PokemonInterface'
 
@@ -9,10 +8,6 @@ interface CardsProps {
 }
 
 export function Cards({ selectedType, setSelectedType, pokemons }: CardsProps ) {
-    useEffect(() => {
-        console.log('selectedType', selectedType)
-    }, [selectedType])
-
     return (
         <>
             <article className="cards">

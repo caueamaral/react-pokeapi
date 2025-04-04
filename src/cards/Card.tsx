@@ -22,7 +22,9 @@ export function Card({ selectedType, setSelectedType, pokemon, index }: CardProp
     return (
         <>
             {
-                pokemonDetails && pokemonDetails.types[0].type.name == selectedType && (
+                pokemonDetails && (
+                    selectedType === 'all' || pokemonDetails.types[0].type.name == selectedType
+                ) && (
                     <section className={`card type-${pokemonDetails.types[0].type.name}`}>
                         <figure>
                             <img src={pokemonDetails.sprites.other.dream_world.front_default} alt={pokemon.name} />
