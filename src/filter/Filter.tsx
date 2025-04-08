@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react'
+
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
@@ -5,17 +7,17 @@ import Select from '@mui/material/Select';
 
 import { SelectChangeEvent } from '@mui/material/Select';
 import { firstLetterUppercase } from '../functions/firstLetterUppercase'
+import { getPokemonTypes } from '../services/getPokemonTypes';
+import { PokemonTypeInterface } from '../interfaces/PokemonTypeInterface'
 
 export function Filter({ selectedType, setSelectedType }: { selectedType: string, setSelectedType: React.Dispatch<React.SetStateAction<string>> }) {
-    const types = [
-        'all',
-        'fire',
-        'water',
-        'grass',
-        'bug',
-        'normal'
-    ]
+    const [types, setTypes] = useState<PokemonTypeInterface[]>([])
 
+    useEffect(() => {
+        getPokemonTypes()
+            .then(response => setTypes(response.data.results))
+    }, [])
+    
     const handleChange = (event: SelectChangeEvent) => {
         setSelectedType(event.target.value)
     }
@@ -40,10 +42,10 @@ export function Filter({ selectedType, setSelectedType }: { selectedType: string
                                 types.map((type, index) => (
                                     <MenuItem
                                         key={index}
-                                        value={type}
+                                        value={type.name}
                                     >
                                         
-                                        {firstLetterUppercase(type)}
+                                        {firstLetterUppercase(type.name)}
                                     </MenuItem>
                                 ))
                             }
