@@ -38,6 +38,7 @@ export function Filter({ selectedType, setSelectedType }: { selectedType: string
                             label="Type"
                             onChange={handleChange}
                         >
+                            <MenuItem value="all">All</MenuItem>
                             {
                                 types.map((type, index) => (
                                     <MenuItem
