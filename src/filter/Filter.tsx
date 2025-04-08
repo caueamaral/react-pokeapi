@@ -40,15 +40,20 @@ export function Filter({ selectedType, setSelectedType }: { selectedType: string
                         >
                             <MenuItem value="all">All</MenuItem>
                             {
-                                types.map((type, index) => (
-                                    <MenuItem
-                                        key={index}
-                                        value={type.name}
-                                    >
-                                        
-                                        {firstLetterUppercase(type.name)}
-                                    </MenuItem>
-                                ))
+                                types.map((type, index) => {
+                                    if (type.name === 'unknown') {
+                                        return
+                                    }
+                                    
+                                    return (
+                                        <MenuItem
+                                            key={index}
+                                            value={type.name}
+                                        >
+                                            {firstLetterUppercase(type.name)}
+                                        </MenuItem>
+                                    )
+                                })
                             }
                         </Select>
                     </FormControl>
