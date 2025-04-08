@@ -19,21 +19,22 @@
     --footerHeight: 80px;
     --mainSpacing: 30px;
     --cardSpacing: 30px;
-    --typeNormal: #ddd;
-    --typeFighting: #e2c9a7;
-    --typePoison: #817b9d;
-    --typeGround: #babf9f;
-    --typeRock: #c3c0d5;
+
     --typeBug: #9cc788;
-    --typeGhost: #8f7bb3;
-    --typeFire: #d78b6a;
-    --typeWater: #9ad1e8;
-    --typeGrass: #a6d7a8;
-    --typeElectric: #f5cd4a;
-    --typePsychic: #d4a435;
-    --typeIce: #cbf4ff;
     --typeDragon: #f8e0aa;
+    --typeElectric: #f5cd4a;
     --typeFairy: #efc9c0;
+    --typeFighting: #e2c9a7;
+    --typeFire: #d78b6a;
+    --typeGhost: #8f7bb3;
+    --typeGrass: #a6d7a8;
+    --typeGround: #babf9f;
+    --typeIce: #cbf4ff;
+    --typeNormal: #ddd;
+    --typePoison: #817b9d;
+    --typePsychic: #d4a435;
+    --typeRock: #c3c0d5;
+    --typeWater: #9ad1e8;
     --radius: 10px;
   }
   

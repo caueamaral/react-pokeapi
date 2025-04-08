@@ -40,27 +40,29 @@ export function Filter({ selectedType, setSelectedType }: { selectedType: string
                         >
                             <MenuItem value="all">All</MenuItem>
                             {
-                                types.map((type, index) => {
-                                    const ignoreTypes = [
-                                        'flying',
-                                        'steel',
-                                        'dark',
-                                        'stellar',
-                                        'unknown'
-                                    ]
-                                    
-                                    if (ignoreTypes.includes(type.name)) {
-                                        return
-                                    }
-                                    
-                                    return (
-                                        <MenuItem
-                                            key={index}
-                                            value={type.name}
-                                        >
-                                            {firstLetterUppercase(type.name)}
-                                        </MenuItem>
-                                    )
+                                types
+                                    .sort((a, b) => a.name.localeCompare(b.name))
+                                    .map((type, index) => {
+                                        const ignoreTypes = [
+                                            'flying',
+                                            'steel',
+                                            'dark',
+                                            'stellar',
+                                            'unknown'
+                                        ]
+                                        
+                                        if (ignoreTypes.includes(type.name)) {
+                                            return
+                                        }
+                                        
+                                        return (
+                                            <MenuItem
+                                                key={index}
+                                                value={type.name}
+                                            >
+                                                {firstLetterUppercase(type.name)}
+                                            </MenuItem>
+                                        )
                                 })
                             }
                         </Select>
