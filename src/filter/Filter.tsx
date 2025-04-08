@@ -41,7 +41,15 @@ export function Filter({ selectedType, setSelectedType }: { selectedType: string
                             <MenuItem value="all">All</MenuItem>
                             {
                                 types.map((type, index) => {
-                                    if (type.name === 'unknown') {
+                                    const ignoreTypes = [
+                                        'flying',
+                                        'steel',
+                                        'dark',
+                                        'stellar',
+                                        'unknown'
+                                    ]
+                                    
+                                    if (ignoreTypes.includes(type.name)) {
                                         return
                                     }
                                     
