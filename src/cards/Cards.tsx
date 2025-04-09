@@ -1,6 +1,7 @@
+import '../css/Cards.css'
+import '../css/Types.css'
 import { Card } from './Card'
 import { PokemonInterface } from '../interfaces/PokemonInterface'
-
 interface CardsProps {
     selectedType: string,
     pokemons: PokemonInterface[]

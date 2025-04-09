@@ -1,0 +1,63 @@
+[class*='type-'] {
+    border:7px solid;
+}
+
+.type-normal {
+    border-color: var(--typeNormal);
+}
+
+.type-fighting {
+    border-color: var(--typeFighting);
+}
+
+.type-poison {
+    border-color: var(--typePoison);
+}
+
+.type-ground {
+    border-color: var(--typeGround);
+}
+
+.type-rock {
+    border-color: var(--typeRock);
+}
+
+.type-bug {
+    border-color: var(--typeBug);
+}
+
+.type-ghost {
+    border-color: var(--typeGhost);
+}
+
+.type-fire {
+    border-color: var(--typeFire);
+}
+
+.type-water {
+    border-color: var(--typeWater);
+}
+
+.type-grass {
+    border-color: var(--typeGrass);
+}
+
+.type-electric {
+    border-color: var(--typeElectric);
+}
+
+.type-psychic {
+    border-color: var(--typePsychic);
+}
+
+.type-ice {
+    border-color: var(--typeIce);
+}
+
+.type-dragon {
+    border-color: var(--typeDragon);
+}
+
+.type-fairy {
+    border-color: var(--typeFairy);
+}

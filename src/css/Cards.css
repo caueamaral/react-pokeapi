@@ -1,0 +1,42 @@
+.cards {
+    display: grid;
+    gap: var(--cardSpacing);
+    grid-template-columns: repeat(auto-fit, minmax(180px, 212px));
+    justify-content: center;
+}
+
+.card {
+    align-items: center;
+    background: var(--white);
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+    min-height: 200px;
+    padding: 20px;
+}
+
+.card figure {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 150px;
+    width: 150px;
+}
+
+.card img {
+    max-height: 150px;
+    max-width: 150px;
+}
+
+.card .number {
+    margin-top: 30px;
+}
+
+.card h2 {
+    font-size: 24px;
+}
+
+.card h2,
+.card p {
+    margin-top: 5px;
+}

@@ -1,0 +1,67 @@
+.filter {
+    margin-bottom: 60px;
+}
+
+@media (min-width: 640px) {
+    .filter {
+        margin-bottom: 30px;
+    }
+}
+
+.filter h1 {
+    color: var(--white);
+    font-size: 22px;
+    margin-block: 20px;
+}
+
+@media (min-width: 640px) {
+    .filter h1 {
+        margin-block: 30px;
+    }
+}
+
+.filter-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 600px) {
+    .filter-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.filter-form {
+    border-radius: var(--radius);
+    width: 212px;
+}
+
+.filter-form .MuiSvgIcon-root {
+    fill: var(--white);
+}
+
+.filter-form .MuiOutlinedInput-notchedOutline {
+    border-color: var(--white);
+}
+
+.filter-form .css-sc8y68-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: var(--white);
+}
+
+.filter-form .css-sc8y68-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root:hover .MuiOutlinedInput-notchedOutline {
+    border-color: var(--white);
+}
+
+.filter-form .css-113d811-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+    color: var(--white);
+}
+
+.filter-form .MuiSelect-select {
+    color: var(--white);
+}
+
+.filter-form .MuiFormLabel-root {
+    color: var(--white);
+}

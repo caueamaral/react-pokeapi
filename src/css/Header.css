@@ -1,0 +1,11 @@
+header {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: var(--headerHeight);
+    justify-content: center;
+}
+
+header .logo {
+    max-width: 250px;
+}

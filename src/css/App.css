@@ -1,0 +1,69 @@
+/* Reset */
+* {
+  font-size: 15px;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+  
+html,
+body {
+  min-height: 100vh;
+}
+  
+  
+/* Variables */
+:root {
+  --white: #fff;
+  --headerHeight: 210px;
+  --footerHeight: 80px;
+  --mainSpacing: 30px;
+  --cardSpacing: 30px;
+
+  --typeBug: #9cc788;
+  --typeDragon: #f8e0aa;
+  --typeElectric: #f5cd4a;
+  --typeFairy: #efc9c0;
+  --typeFighting: #e2c9a7;
+  --typeFire: #d78b6a;
+  --typeGhost: #8f7bb3;
+  --typeGrass: #a6d7a8;
+  --typeGround: #babf9f;
+  --typeIce: #cbf4ff;
+  --typeNormal: #ddd;
+  --typePoison: #817b9d;
+  --typePsychic: #d4a435;
+  --typeRock: #c3c0d5;
+  --typeWater: #9ad1e8;
+  --radius: 10px;
+}
+
+
+/* Utilities */
+.gray {
+  color: #aaa;
+}
+
+/* Structure */
+body {
+  background: linear-gradient(to right, #293581, #da353b);
+  font-family: Roboto, sans-serif;
+}
+
+.container {
+  margin-inline: auto;
+  max-width: 1000px;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Main */
+main {
+  min-height: calc(100vh - var(--headerHeight) - var(--footerHeight) - var(--mainSpacing));
+  padding-inline: var(--mainSpacing);
+  padding-bottom: calc(var(--mainSpacing) + 30px);
+}

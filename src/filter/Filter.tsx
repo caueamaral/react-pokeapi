@@ -1,3 +1,4 @@
+import '../css/Filter.css'
 import { useEffect, useState } from 'react'
 
 import InputLabel from '@mui/material/InputLabel';
