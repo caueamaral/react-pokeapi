@@ -82,13 +82,6 @@
     padding-bottom: calc(var(--mainSpacing) + 30px);
   }
   
-  main h1 {
-    color: var(--white);
-    font-size: 24px;
-    margin-block: 30px;
-  }
-  
-  
   
   /* Footer */
   footer {
@@ -214,13 +207,38 @@
   
   /* Filter */
   .filter {
-    margin-bottom: 30px;
+    margin-bottom: 60px;
+  }
+  
+  @media (min-width: 640px) {
+    .filter {
+      margin-bottom: 30px;
+    }
+  }
+
+  .filter h1 {
+    color: var(--white);
+    font-size: 22px;
+    margin-block: 20px;
+  }
+
+  @media (min-width: 640px) {
+    .filter h1 {
+      margin-block: 30px;
+    }
   }
   
   .filter-container {
     align-items: center;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  @media (min-width: 600px) {
+    .filter-container {
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
   
   .filter-form {
