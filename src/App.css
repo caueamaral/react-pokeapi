@@ -105,26 +105,10 @@
   .cards {
     display: grid;
     gap: var(--cardSpacing);
+    grid-template-columns: repeat(auto-fit, minmax(180px, 212px));
+    justify-content: center;
   }
-  
-  @media (min-width:499px) {
-    .cards {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  @media (min-width:700px) and (max-width:899px) {
-    .cards {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-  
-  @media (min-width:900px) {
-    .cards {
-      grid-template-columns: repeat(4, 1fr);
-    }
-  }
-  
+    
   .card {
     align-items: center;
     background: var(--white);
