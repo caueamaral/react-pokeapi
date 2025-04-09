@@ -1,6 +1,8 @@
 <img src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png" alt="PokéAPI">
 
-List of Pokémon cards using [PokéAPI](https://pokeapi.co) and [React](https://react.dev).
+List of Pokémon cards using [PokéAPI](https://pokeapi.co) and React JS. [See the project](https://caueamaral.github.io/react-pokeapi).
+
+<img src="src/images/react-pokeapi.jpg" alt="PokéAPI">
 
 ## React
 
