@@ -31,7 +31,7 @@ export function Filter({ selectedType, setSelectedType }: { selectedType: string
                 </h1>
                 <div>
                     <FormControl className="filter-form">
-                        <InputLabel id="demo-simple-select-label">Type</InputLabel>
+                        <InputLabel id="demo-simple-select-label">TYPE</InputLabel>
                         <Select
                             labelId="demo-simple-select-label"
                             id="demo-simple-select"
